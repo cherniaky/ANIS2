@@ -1,4 +1,4 @@
-package Priklad2_10;
+package cvik2.Priklad2_10;
 
 public class Priklad2_10 {
     public static void main(String[] args) {

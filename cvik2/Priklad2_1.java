@@ -1,3 +1,4 @@
+package cvik2;
 public class Priklad2_1 {
     public static void main(String[] args) {
         int plat = 2500;

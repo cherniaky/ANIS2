@@ -1,7 +1,7 @@
-package projekt.clenovia;
+package cvik3.projekt.clenovia;
 
-import projekt.ClenTimu;
-import projekt.ProjektovyTim;
+import cvik3.projekt.ClenTimu;
+import cvik3.projekt.ProjektovyTim;
 
 public class Manazer extends ClenTimu {
 

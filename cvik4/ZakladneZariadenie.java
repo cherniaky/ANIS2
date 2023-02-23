@@ -1,3 +1,5 @@
+package cvik4;
+
 public abstract class ZakladneZariadenie implements Zariadenie {
     boolean stav;
     String nazov;

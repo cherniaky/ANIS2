@@ -1,3 +1,5 @@
+package cvik2;
+
 public class Priklad2_3 {
     public static void main(String[] args) {
         int[] numbers = { 25, 24, 26, 45, 25, 23, 50, 51 };

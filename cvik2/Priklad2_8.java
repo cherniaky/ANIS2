@@ -1,3 +1,5 @@
+package cvik2;
+
 public class Priklad2_8 {
     public static void main(String[] args) {
         String[] dni = { "pondelok", "utorok", "streda", "stvrtok", "piatok", "sobota", "nedela" };

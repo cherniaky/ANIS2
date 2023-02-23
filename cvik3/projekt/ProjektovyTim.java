@@ -1,6 +1,6 @@
-package projekt;
+package cvik3.projekt;
 
-import projekt.clenovia.Programator;
+import cvik3.projekt.clenovia.Programator;
 
 public class ProjektovyTim {
     protected String nazov;

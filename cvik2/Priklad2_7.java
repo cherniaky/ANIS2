@@ -1,3 +1,5 @@
+package cvik2;
+
 public class Priklad2_7 {
     public static void main(String[] args) {
 

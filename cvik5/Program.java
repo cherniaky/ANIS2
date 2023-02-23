@@ -1,4 +1,4 @@
-package cvik4;
+package cvik5;
 
 public class Program {
     public static void main(String[] args) {
@@ -6,13 +6,21 @@ public class Program {
         Osvetlenie osvetlenie = new Osvetlenie("osvetlenie");
         Dom dom = new Dom(vykurovanie, osvetlenie);
 
-        dom.zapniSvetlo();
+        try {
+            dom.zapniSvetlo();
+        } catch (ChybaZariadenia e) {
+            System.out.println("Chyba zariadenia");
+        }
         dom.zapniKurenie();
         try {
             dom.nastavTeplotu(40);
-        } catch (IllegalArgumentException e) {
+        } catch (ChybaVykurovania e) {
             System.out.println("Teplota je mimo rozsahu, nastavim 25");
-            vykurovanie.nastavTeplotu(25);
+            try {
+                vykurovanie.nastavTeplotu(25);
+            } catch (ChybaVykurovania e1) {
+                
+            }
         } finally {
             dom.vypniKurenie();
         }

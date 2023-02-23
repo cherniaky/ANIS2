@@ -1,4 +1,4 @@
-package cvik4;
+package cvik5;
 
 public class Dom {
     Vykurovanie vykurovanie;
@@ -9,11 +9,11 @@ public class Dom {
         this.vykurovanie = vykurovanie;
     }
 
-    public void zapniSvetlo() {
+    public void zapniSvetlo() throws ChybaZariadenia {
         osvetlenie.zapni();
     }
 
-    public void vypniSvetlo() {
+    public void vypniSvetlo() throws ChybaZariadenia {
         osvetlenie.vypni();
     }
 
@@ -25,9 +25,9 @@ public class Dom {
         vykurovanie.vypni();
     }
 
-    public void nastavTeplotu(int teplota) {
-       
-            vykurovanie.nastavTeplotu(teplota);
-       
+    public void nastavTeplotu(int teplota) throws ChybaVykurovania {
+
+        vykurovanie.nastavTeplotu(teplota);
+
     }
 }

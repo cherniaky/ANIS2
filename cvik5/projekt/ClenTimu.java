@@ -1,4 +1,6 @@
-package cvik3.projekt;
+package cvik5.projekt;
+
+import java.util.Objects;
 
 abstract public class ClenTimu {
     protected String meno;
@@ -18,6 +20,18 @@ abstract public class ClenTimu {
             return meno + " : " + tim.nazov;
         }
         return meno;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof ClenTimu) {
+            ClenTimu other = (ClenTimu) obj;
+            return this.meno.equals(other.meno);
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        return Objects.hash(meno);
     }
 
     public abstract void spracujUlohu(String uloha);

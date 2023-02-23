@@ -1,4 +1,4 @@
-package cvik4;
+package cvik5;
 
 public class Vykurovanie extends ZakladneZariadenie implements Termostat {
     static int MAX_TEPLOTA = 40;
@@ -19,9 +19,9 @@ public class Vykurovanie extends ZakladneZariadenie implements Termostat {
     }
 
     @Override
-    public void nastavTeplotu(int teplota) {
+    public void nastavTeplotu(int teplota) throws ChybaVykurovania {
         if (teplota < 0 || teplota > MAX_TEPLOTA) {
-           throw new IllegalArgumentException("Teplota je mimo rozsahu");
+            throw new ChybaVykurovania("Teplota je mimo rozsahu", this);
         }
         this.teplota = teplota;
         System.out.println("aktuálna teplota: " + teplota);

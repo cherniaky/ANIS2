@@ -1,7 +1,9 @@
-import projekt.*;
-import projekt.clenovia.Manazer;
-import projekt.clenovia.Programator;
-import projekt.clenovia.Tester;
+package cvik3;
+
+import cvik3.projekt.*;
+import cvik3.projekt.clenovia.Manazer;
+import cvik3.projekt.clenovia.Programator;
+import cvik3.projekt.clenovia.Tester;
 
 public class Program {
 
