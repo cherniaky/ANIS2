@@ -10,14 +10,14 @@ public class Osvetlenie extends ZakladneZariadenie {
     public void zapni() {
         if (!stav) {
             super.zapni();
-            System.out.println("osvetlenie zapnuté");
+            System.out.println("osvetlenie zapnute");
         }
     }
     @Override
     public void vypni() {
         if (stav) {
             super.vypni();
-            System.out.println("osvetlenie vypnuté");
+            System.out.println("osvetlenie vypnute");
         }
         
     }

@@ -1,8 +1,8 @@
 package cvik4;
 
 public class Dom {
-    Vykurovanie vykurovanie;
-    Osvetlenie osvetlenie;
+    protected Vykurovanie vykurovanie;
+    protected Osvetlenie osvetlenie;
 
     public Dom(Vykurovanie vykurovanie, Osvetlenie osvetlenie) {
         this.osvetlenie = osvetlenie;

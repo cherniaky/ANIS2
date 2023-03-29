@@ -1,33 +1,73 @@
 package cvik5;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Dom {
-    Vykurovanie vykurovanie;
-    Osvetlenie osvetlenie;
+    // Vykurovanie vykurovanie;
+    // Osvetlenie osvetlenie;
+    List<ZakladneZariadenie> zariadenia = new ArrayList<>();
 
     public Dom(Vykurovanie vykurovanie, Osvetlenie osvetlenie) {
-        this.osvetlenie = osvetlenie;
-        this.vykurovanie = vykurovanie;
+        // this.osvetlenie = osvetlenie;
+        // this.vykurovanie = vykurovanie;
+        zariadenia.add(vykurovanie);
+        zariadenia.add(osvetlenie);
     }
 
     public void zapniSvetlo() throws ChybaZariadenia {
-        osvetlenie.zapni();
+        for (ZakladneZariadenie zakladneZariadenie : zariadenia) {
+            if (zakladneZariadenie instanceof Osvetlenie) {
+                zakladneZariadenie.zapni();
+            }
+        }
     }
 
     public void vypniSvetlo() throws ChybaZariadenia {
-        osvetlenie.vypni();
+        for (ZakladneZariadenie zakladneZariadenie : zariadenia) {
+            if (zakladneZariadenie instanceof Osvetlenie) {
+                zakladneZariadenie.vypni();
+            }
+        }
+        // osvetlenie.vypni();
     }
 
     public void zapniKurenie() {
-        vykurovanie.zapni();
+        for (ZakladneZariadenie zakladneZariadenie : zariadenia) {
+            if (zakladneZariadenie instanceof Vykurovanie) {
+                // zakladneZariadenie.vypni();
+                try {
+                    zakladneZariadenie.zapni();
+                } catch (ChybaZariadenia e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public void vypniKurenie() {
-        vykurovanie.vypni();
+        for (ZakladneZariadenie zakladneZariadenie : zariadenia) {
+            if (zakladneZariadenie instanceof Vykurovanie) {
+                // zakladneZariadenie.vypni();
+                try {
+                    zakladneZariadenie.vypni();
+                } catch (ChybaZariadenia e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+        // vykurovanie.vypni();
     }
 
     public void nastavTeplotu(int teplota) throws ChybaVykurovania {
-
-        vykurovanie.nastavTeplotu(teplota);
+        for (ZakladneZariadenie zakladneZariadenie : zariadenia) {
+            if (zakladneZariadenie instanceof Vykurovanie) {
+                // vykurovanie.vypni();
+                ((Vykurovanie)zakladneZariadenie).nastavTeplotu(teplota);
+            }
+        }
 
     }
 }

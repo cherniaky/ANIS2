@@ -1,8 +1,8 @@
 package cvik4;
 
 public abstract class ZakladneZariadenie implements Zariadenie {
-    boolean stav;
-    String nazov;
+    protected boolean stav;
+    protected String nazov;
 
     ZakladneZariadenie(String nazov) {
         this.nazov = nazov;
@@ -12,7 +12,7 @@ public abstract class ZakladneZariadenie implements Zariadenie {
     public void zapni() {
         if (!stav) {
             stav = true;
-            System.out.println("zariadenie zapnuté");
+            System.out.println("zariadenie zapnute");
         }
     }
 

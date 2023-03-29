@@ -1,8 +1,8 @@
 package cvik4;
 
 public class Vykurovanie extends ZakladneZariadenie implements Termostat {
-    static int MAX_TEPLOTA = 40;
-    int teplota;
+    static protected int MAX_TEPLOTA = 40;
+    protected int teplota;
 
     Vykurovanie(String nazov) {
         super(nazov);
@@ -24,7 +24,7 @@ public class Vykurovanie extends ZakladneZariadenie implements Termostat {
            throw new IllegalArgumentException("Teplota je mimo rozsahu");
         }
         this.teplota = teplota;
-        System.out.println("aktuálna teplota: " + teplota);
+        System.out.println("aktualna teplota: " + teplota);
     }
 
 }

@@ -25,4 +25,19 @@ public abstract class ZakladneZariadenie implements Zariadenie {
         stav = false;
         System.out.println("zariadenie vypnuté");
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (!(obj instanceof ZakladneZariadenie)) {
+            return false;
+        }
+
+        return this.nazov.equals(((ZakladneZariadenie)obj).nazov);
+    }
+
+    @Override
+    public int hashCode() {
+        return this.nazov.hashCode();
+    }
 }
