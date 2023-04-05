@@ -6,6 +6,7 @@ import java.util.List;
 public class Priklad5_8 {
     public static void main(String[] args) {
         List<String> wordList = new ArrayList<>();
+        String[] arr = {};
         wordList.add("apple");
         wordList.add("banana");
         wordList.add("cherry");
