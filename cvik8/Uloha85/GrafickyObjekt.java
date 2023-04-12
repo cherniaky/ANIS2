@@ -12,23 +12,24 @@ public class GrafickyObjekt implements Iterable<Bod> {
 
     @Override
     public Iterator<Bod> iterator() {
-        return new BodIterator();
+        return new BodIterator(body);
     }
 
-    private class BodIterator implements Iterator<Bod> {
+    // private class BodIterator implements Iterator<Bod> {
 
-        private int currentIndex = 0;
+    // private int currentIndex = 0;
 
-        @Override
-        public boolean hasNext() {
-            System.out.println("hasnext");
-            return currentIndex < body.length && body[currentIndex] != null;
-        }
-        
-        @Override
-        public Bod next() {
-            System.out.println("next");
-            return body[currentIndex++];
-        }
-    }
+    // @Override
+    // public boolean hasNext() {
+    // System.out.println("hasnext");
+    // return currentIndex < body.length && body[currentIndex] != null;
+    // }
+
+    // @Override
+    // public Bod next() {
+    // System.out.println("next");
+    // return body[currentIndex++];
+    // }
+    // }
+
 }

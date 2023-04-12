@@ -9,17 +9,19 @@ public class Siet {
 
     public void pripojZariadenie(Zariadenie zariadenie) {
         zariadenia.add(zariadenie);
-        zariadenie.oznamPripojenie(this);
+        this.notifikujVsetky("pripojenie");
     }
 
     public void odpojZariadenie(Zariadenie zariadenie) {
         zariadenia.remove(zariadenie);
-        zariadenie.oznamOdpojenie(this);
+        this.notifikujVsetky("odpojenie");
     }
 
-    public void notifikujVsetky() {
+    public void notifikujVsetky(String sprava) {
+
         for (Zariadenie zariadenie : zariadenia) {
-            zariadenie.aktualizuj(this);
+            zariadenie.spracuj(sprava);
         }
+
     }
 }

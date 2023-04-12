@@ -1,19 +1,23 @@
 package cvik8;
 
 public class BodDecorator implements Bod {
-    protected Bod bod;
-    protected Bod center;
+    int X;
+    int Y;
+    Bod stred;
 
-    public BodDecorator(Bod bod, Bod center) {
-        this.bod = bod;
-        this.center = center;
+    public BodDecorator(int x, int y, Bod stred) {
+        this.X = x;
+        this.Y = y;
+        this.stred = stred;
     }
 
+    @Override
     public int getX() {
-        return bod.getX() + center.getX();
+        return this.X + stred.getX();
     }
 
+    @Override
     public int getY() {
-        return bod.getY() + center.getY();
+        return this.Y + stred.getY();
     }
 }
