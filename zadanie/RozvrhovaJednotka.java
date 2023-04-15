@@ -26,6 +26,7 @@ public class RozvrhovaJednotka {
     }
 
     public String ziskatInfo() {
-        return "Cena: " + cena + " Cas: " + cas.toString() + " Kapacita: " + kapacita;
+        return "Kapela: " + kapela.ziskatNazov() + ", Cena: " + cena + ", Volne listky: "
+                + predajListkov.getPocetListkov();
     }
 }

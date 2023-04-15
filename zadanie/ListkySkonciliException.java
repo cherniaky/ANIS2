@@ -3,8 +3,8 @@ package zadanie;
 import java.time.LocalDateTime;
 
 public class ListkySkonciliException extends Exception {
-    protected LocalDateTime cas;
-    protected String nazovKapely;
+    private LocalDateTime cas;
+    private String nazovKapely;
 
     public ListkySkonciliException() {
         this(null);
@@ -20,7 +20,7 @@ public class ListkySkonciliException extends Exception {
         this.nazovKapely = nazov;
     }
 
-    public LocalDateTime getCasDateTime() {
+    public LocalDateTime getCas() {
         return cas;
     }
 

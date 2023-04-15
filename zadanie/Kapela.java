@@ -10,12 +10,21 @@ public class Kapela implements IKapela {
     private List<String> albumy = new ArrayList<>();
     private List<String> skladby = new ArrayList<>();
 
+    public Kapela(String nazov, String zaner) {
+        this(nazov, new ArrayList<ClenKapely>(), zaner, new ArrayList<String>(), new ArrayList<String>());
+    }
+
     public Kapela(String nazov, List<ClenKapely> cleny, String zaner, List<String> albumy, List<String> skladby) {
         this.nazov = nazov;
-        this.cleny.addAll(cleny);
+        this.cleny = cleny;
         this.zaner = zaner;
-        this.albumy.addAll(albumy);
-        this.skladby.addAll(skladby);
+        this.albumy = albumy;
+        this.skladby = skladby;
+    }
+
+    @Override
+    public void pridajClena(ClenKapely clen) {
+        cleny.add(clen);
     }
 
     @Override

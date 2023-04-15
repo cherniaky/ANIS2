@@ -1,6 +1,7 @@
 package zadanie;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,8 +19,16 @@ public class Program implements IProgram {
     }
 
     @Override
-    public Map<LocalDateTime, RozvrhovaJednotka> ziskatHarmonogram() {
-        return harmonogram;
+    public String ziskatHarmonogram() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Harmonogram: \n");
+        for (Map.Entry<LocalDateTime, RozvrhovaJednotka> entry : harmonogram.entrySet()) {
+            LocalDateTime dateTime = entry.getKey();
+            RozvrhovaJednotka rozvrhovaJednotka = entry.getValue();
+            sb.append(dateTime.format(DateTimeFormatter
+                    .ofPattern("HH:mm"))).append(" - ").append(rozvrhovaJednotka.ziskatInfo()).append("\n");
+        }
+        return sb.toString();
     }
 
     @Override

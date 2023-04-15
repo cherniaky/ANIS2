@@ -35,4 +35,8 @@ public class PredajListkov {
         listok.zmazatMeno();
         listky.add(listok);
     }
+
+    public int getPocetListkov() {
+        return listky.size();
+    }
 }

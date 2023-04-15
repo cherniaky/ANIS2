@@ -2,7 +2,6 @@ package zadanie;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Map;
 
 public interface IProgram {
 
@@ -14,5 +13,5 @@ public interface IProgram {
 
     public Collection<RozvrhovaJednotka> ziskatRozvrhovyJednotky();
 
-    public Map<LocalDateTime, RozvrhovaJednotka> ziskatHarmonogram(); 
+    public String ziskatHarmonogram(); 
 }

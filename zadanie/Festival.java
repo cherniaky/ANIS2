@@ -1,13 +1,14 @@
 package zadanie;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Festival {
     private static Festival festival = null;
     private String nazov;
     private LocalDate datum;
     private String miesto;
-    private Program program;
+    private Program program = new Program();
 
     private Festival(String nazov, LocalDate datum, String miesto) {
         this.nazov = nazov;
@@ -24,7 +25,7 @@ public class Festival {
     }
 
     public String getInfo() {
-        return nazov + " at " + datum.toString() + " in " + miesto;
+        return nazov + " in " + miesto;
     }
 
     public Program ziskatProgram() {

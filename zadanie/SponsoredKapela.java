@@ -39,6 +39,11 @@ public class SponsoredKapela implements IKapela {
     }
 
     @Override
+    public void pridajClena(ClenKapely clen) {
+        kapela.pridajClena(clen);
+    }
+
+    @Override
     public List<String> ziskatZoznamSkladieb() {
         return kapela.ziskatZoznamSkladieb();
     }
