@@ -10,6 +10,6 @@ public interface IKapela {
     public List<String> ziskatZoznamAlbumov(); 
     public List<String> ziskatZoznamSkladieb(); 
     public String ziskatZaner(); 
-    public boolean equals(Kapela kapela); 
+    public boolean equals(IKapela kapela); 
     public int hashCode(); 
 }

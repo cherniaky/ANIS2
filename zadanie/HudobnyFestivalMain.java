@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Program pre pracu s systemom hudobneho festivalu. Kód definuje triedy pre kapelu, členov kapely, festival, program festivalu a predaj lístkov pre festival.
 public class HudobnyFestivalMain {
     public static void main(String[] args) {
         Festival festival = Festival.getFestival("Letny festival 2023", LocalDate.of(2023, 7, 10), "Kosice");

@@ -3,6 +3,7 @@ package zadanie;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+// Class pre Festival, implementuje Singelton pattern a Composite
 public class Festival {
     private static Festival festival = null;
     private String nazov;

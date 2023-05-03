@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+// Class na Predaj listkov, implementuje Object pool pattern
 public class PredajListkov {
     private List<Listok> listky = new ArrayList<>();
     private LocalDateTime cas;

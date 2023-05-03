@@ -2,6 +2,7 @@ package zadanie;
 
 import java.time.LocalDateTime;
 
+// Builder pattern pre Listok
 public class ListokBuilder {
     private String nazovKapely = "";
     private LocalDateTime cas = null;

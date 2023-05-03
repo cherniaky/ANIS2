@@ -3,6 +3,7 @@ package zadanie;
 import java.util.ArrayList;
 import java.util.List;
 
+// Builder pattern pre Kapelu
 public class KapelaBuilder {
     private String nazov = "";
     private List<ClenKapely> cleny = new ArrayList<>();

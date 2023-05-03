@@ -1,5 +1,6 @@
 package zadanie;
 
+// Class pre osobu
 public abstract class Osoba {
     private String meno;
     private String email;

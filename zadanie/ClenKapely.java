@@ -1,5 +1,6 @@
 package zadanie;
 
+// Class pre clena kapley
 public class ClenKapely extends Osoba {
     public String nastroj;
 

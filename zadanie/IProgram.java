@@ -5,7 +5,7 @@ import java.util.Collection;
 
 public interface IProgram {
 
-    public void pridajRozvrhovuJednotku(Kapela kapela, int cena, LocalDateTime cas, int kapacita);
+    public void pridajRozvrhovuJednotku(IKapela kapela, int cena, LocalDateTime cas, int kapacita);
 
     public RozvrhovaJednotka ziskatRozvrhovuJednotku(LocalDateTime cas);
 
