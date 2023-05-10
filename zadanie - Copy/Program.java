@@ -14,7 +14,7 @@ public class Program implements IProgram {
     }
 
     @Override
-    public void pridajRozvrhovuJednotku(IKapela kapela, int cena, LocalDateTime cas, int kapacita) {
+    public void pridajRozvrhovuJednotku(Kapela kapela, int cena, LocalDateTime cas, int kapacita) {
         harmonogram.put(cas, new RozvrhovaJednotka(kapela, cena, cas, kapacita));
     }
 

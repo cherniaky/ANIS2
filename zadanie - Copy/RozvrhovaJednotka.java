@@ -3,13 +3,13 @@ package zadanie;
 import java.time.LocalDateTime;
 
 public class RozvrhovaJednotka {
-    private IKapela kapela;
+    private Kapela kapela;
     private int cena;
     private LocalDateTime cas;
     private int kapacita;
     private PredajListkov predajListkov;
 
-    public RozvrhovaJednotka(IKapela kapela, int cena, LocalDateTime cas, int kapacita) {
+    public RozvrhovaJednotka(Kapela kapela, int cena, LocalDateTime cas, int kapacita) {
         this.cas = cas;
         this.kapela = kapela;
         this.kapacita = kapacita;
